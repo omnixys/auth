@@ -9,28 +9,28 @@ importers:
   .:
     dependencies:
       '@nestjs/common':
-        specifier: ^11.1.16
+        specifier: ^10.0.0 || ^11.0.0
         version: 11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/core':
-        specifier: ^11.1.16
+        specifier: ^10.0.0 || ^11.0.0
         version: 11.1.16(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/graphql':
-        specifier: ^13.2.4
+        specifier: ^13.0.0
         version: 13.2.4(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.16(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.13.1)(reflect-metadata@0.2.2)
       '@nestjs/jwt':
-        specifier: ^11.0.2
+        specifier: ^11.0.0
         version: 11.0.2(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))
       '@nestjs/passport':
-        specifier: ^11.0.5
+        specifier: ^11.0.0
         version: 11.0.5(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(passport@0.7.0)
       '@omnixys/context':
-        specifier: 1.0.0
+        specifier: ^1.0.0
         version: 1.0.0(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.2.4(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.16(@nestjs/common@11.1.16(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.13.1)(reflect-metadata@0.2.2))(fastify@5.8.2)
       '@omnixys/contracts':
         specifier: ^1.2.0
         version: 1.2.0
       fastify:
-        specifier: ^5.8.2
+        specifier: ^5.0.0
         version: 5.8.2
       jwks-rsa:
         specifier: ^4.0.1
