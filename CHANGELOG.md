@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.3](https://github.com/omnixys/auth/compare/v1.1.2...v1.1.3) (2026-03-11)
+
+### Log
+
+* **Log:** add logs ([](https://github.com/omnixys/auth/commit/83b8f5ab9d56913003c1533e7241b82a275833e3))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/auth ([](https://github.com/omnixys/auth/commit/0e6d577856dea7af0eed111a5e20ccfcd216be09))
+
 ## [1.1.2](https://github.com/omnixys/auth/compare/v1.1.1...v1.1.2) (2026-03-11)
 
 ### Log
