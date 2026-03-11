@@ -9,7 +9,8 @@ import { getRequest } from '@omnixys/context'
 export class CookieAuthGuard implements CanActivate {
 
   constructor(private readonly jwt: JwtService) {
-  }
+    console.log('HeaderAuthGuard created')
+}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
 
