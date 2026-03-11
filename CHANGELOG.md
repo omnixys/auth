@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.4](https://github.com/omnixys/auth/compare/v1.1.3...v1.1.4) (2026-03-11)
+
+### Auth
+
+* **Auth:** update module ([](https://github.com/omnixys/auth/commit/c39c4cb3b8dab50a47d9c1272f1c012acff185ad))
+
 ## [1.1.3](https://github.com/omnixys/auth/compare/v1.1.2...v1.1.3) (2026-03-11)
 
 ### Log
