@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.0.1](https://github.com/omnixys/auth/compare/v1.0.0...v1.0.1) (2026-03-11)
+
+### Index
+
+* **Index:** add index.ts ([](https://github.com/omnixys/auth/commit/99aec10f434ce06b01652caa71056d71a48536c1))
+
 ## 1.0.0 (2026-03-11)
 
 ### Ci
