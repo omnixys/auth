@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.8](https://github.com/omnixys/auth/compare/v1.1.7...v1.1.8) (2026-03-11)
+
+### Dix
+
+* **Dix:** fix ([](https://github.com/omnixys/auth/commit/5ad2a7785c1af42b89fe493334f8c5cc70bb8ca1))
+
 ## [1.1.7](https://github.com/omnixys/auth/compare/v1.1.6...v1.1.7) (2026-03-11)
 
 ### Other
