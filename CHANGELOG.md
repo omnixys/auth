@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.1](https://github.com/omnixys/auth/compare/v1.1.0...v1.1.1) (2026-03-11)
+
+### Jwt
+
+* **Jwt:** remove jwt ([](https://github.com/omnixys/auth/commit/20c52658453f283d49969a89aaeed5a6f48b1610))
+
 ## [1.1.0](https://github.com/omnixys/auth/compare/v1.0.1...v1.1.0) (2026-03-11)
 
 ### Type
