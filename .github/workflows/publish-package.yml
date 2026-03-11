@@ -1,4 +1,4 @@
-name: Publish Contracts
+name: Publish Auth
 
 on:
   workflow_run:

@@ -9,7 +9,7 @@ import type { JwtService } from '@nestjs/jwt'
 import type { KeycloakRawOutput } from '../dto/kc-rwa.dto.js'
 import { extractUserRoles } from '../utils/extract-roles.util.js'
 import { getRequest } from '@omnixys/context'
-import { extractBearerToken } from '../utils/token-extractor.utils.js'
+import { extractBearerToken } from '../utils/token-extractor.util.js'
 @Injectable()
 export class HeaderAuthGuard implements CanActivate {
 
