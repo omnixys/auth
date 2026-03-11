@@ -18,7 +18,7 @@ export class CookieAuthGuard implements CanActivate {
     const accessToken = req.cookies?.access_token
     const refreshToken = req.cookies?.refresh_token
 
-        console.debug({accessToken})
+        console.debug({accessToken, e: process.env.KC_URL, h: process.env.KC_REALM})
 
     if (!accessToken) {
       throw new UnauthorizedException('Missing access_token cookie')
