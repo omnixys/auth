@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.0](https://github.com/omnixys/auth/compare/v1.0.1...v1.1.0) (2026-03-11)
+
+### Type
+
+* **Type:** remove .d.ts ([](https://github.com/omnixys/auth/commit/bede5d2b7c26946256efbe129e4486b13732e9b5))
+
 ## [1.0.1](https://github.com/omnixys/auth/compare/v1.0.0...v1.0.1) (2026-03-11)
 
 ### Index
