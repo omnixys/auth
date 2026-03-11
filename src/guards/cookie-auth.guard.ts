@@ -18,9 +18,8 @@ export class CookieAuthGuard implements CanActivate {
     const accessToken = req.cookies?.access_token
     const refreshToken = req.cookies?.refresh_token
 
-        console.debug({accessToken, e: process.env.KC_URL, h: process.env.KC_REALM})
-
     if (!accessToken) {
+      console.error('Missing access_token cookie')
       throw new UnauthorizedException('Missing access_token cookie')
     }
 
@@ -29,13 +28,11 @@ export class CookieAuthGuard implements CanActivate {
     try {
       payload = await this.jwt.verifyAsync(accessToken)
     } catch {
+      console.error('Invalid access token')
       throw new UnauthorizedException('Invalid access token')
     }
 
     const roles = extractUserRoles(payload)
-
-    console.debug({payload})
-console.log({roles})
 
     req.user = {
       id: payload.sub,
