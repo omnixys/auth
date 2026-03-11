@@ -4,7 +4,7 @@
   "type": "module",
   "private": false,
   "packageManager": "pnpm@9.12.0",
-  "description": "Shared domain contracts for Omnixys microservices",
+  "description": "Authentication and authorization utilities for Omnixys NestJS microservices.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -29,6 +29,17 @@
     "auth",
     "microservices"
   ],
+  "exports": {
+  ".": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  }
+},
+"engines": {
+  "node": ">=20"
+},
+"sideEffects": false,
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@biomejs/biome": "^2.4.6",
@@ -42,15 +53,17 @@
     "@types/passport-jwt": "^4.0.1",
     "semantic-release": "^25.0.3"
   },
+  "peerDependencies": {
+  "@nestjs/common": "^10.0.0 || ^11.0.0",
+  "@nestjs/core": "^10.0.0 || ^11.0.0",
+  "@nestjs/graphql": "^13.0.0",
+  "@nestjs/jwt": "^11.0.0",
+  "@nestjs/passport": "^11.0.0",
+  "fastify": "^5.0.0"
+},
   "dependencies": {
-    "@nestjs/common": "^11.1.16",
-    "@nestjs/core": "^11.1.16",
-    "@nestjs/graphql": "^13.2.4",
-    "@nestjs/jwt": "^11.0.2",
-    "@nestjs/passport": "^11.0.5",
-    "@omnixys/context": "1.0.0",
+    "@omnixys/context": "^1.0.0",
     "@omnixys/contracts": "^1.2.0",
-    "fastify": "^5.8.2",
     "jwks-rsa": "^4.0.1",
     "passport-jwt": "^4.0.1"
   }
