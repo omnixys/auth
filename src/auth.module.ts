@@ -8,6 +8,12 @@ import { HeaderAuthGuard } from './guards/header-auth.guard.js'
 import { RoleGuard } from './guards/role.guard.js'
 
 @Module({
+  imports: [
+       JwtModule.register({
+      publicKey: undefined,
+      signOptions: { algorithm: 'RS256' },
+    }),
+  ],
   providers: [
     JwtStrategy,
     HeaderAuthGuard,
