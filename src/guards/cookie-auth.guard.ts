@@ -31,6 +31,9 @@ export class CookieAuthGuard implements CanActivate {
 
     const roles = extractUserRoles(payload)
 
+    console.debug({payload})
+console.log({roles})
+
     req.user = {
       id: payload.sub,
       username: payload.preferred_username,
