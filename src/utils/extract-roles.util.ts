@@ -1,4 +1,4 @@
-import type { KeycloakRawOutput } from '../dto/kc-rwa.dto.js';
+import type { KeycloakRawOutput } from '@omnixys/contracts';
 import { filterRelevantRoles } from './role-filter.util.js';
 
 /**

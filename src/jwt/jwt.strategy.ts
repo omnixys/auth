@@ -8,7 +8,7 @@ import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import jwksRsa from 'jwks-rsa';
 import { ExtractJwt, Strategy } from 'passport-jwt';
-import type { KeycloakRawOutput } from '../dto/kc-rwa.dto.js';
+import type { KeycloakRawOutput } from '@omnixys/contracts';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

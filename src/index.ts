@@ -12,9 +12,6 @@ export * from './decorators/current-user.decorator.js'
 export * from './decorators/public.decorator.js'
 export * from './decorators/roles.decorator.js'
 
-// dto
-export * from  './dto/kc-rwa.dto.js'
-
 // guards
 export * from './guards/cookie-auth.guard.js'
 export * from './guards/header-auth.guard.js'
