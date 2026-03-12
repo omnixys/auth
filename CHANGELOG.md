@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [2.0.0](https://github.com/omnixys/auth/compare/v1.1.14...v2.0.0) (2026-03-12)
+
+### Auth
+
+* **Auth:** align guards with passport jwt strategy and support cookie tokens ([](https://github.com/omnixys/auth/commit/5f2108d1a389fd4e09ad5c5494d3ef02797f7bcd))
+
 ## [1.1.14](https://github.com/omnixys/auth/compare/v1.1.13...v1.1.14) (2026-03-12)
 
 ### Debug
