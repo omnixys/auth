@@ -29,9 +29,14 @@ export class CookieAuthGuard implements CanActivate {
 
     try {
       payload = await this.jwt.verifyAsync(accessToken)
-    } catch {
-      console.error('Invalid access token')
+    } catch(e) {
+      console.error('Invalid access token');
+       console.log('Invalid access token');
+        console.log({e});
       throw new UnauthorizedException('Invalid access token')
+    } finally {
+         payload = await this.jwt.verifyAsync(accessToken)
+      console.log({accessToken, payload })
     }
 
     const roles = extractUserRoles(payload)
