@@ -1,6 +1,6 @@
 import { createParamDecorator, type ExecutionContext } from "@nestjs/common";
 import { getRequest } from "@omnixys/context";
-import type { AuthUser } from "../types/fastify.js";
+import type { AuthUser } from "@omnixys/context";
 import { extractUserRoles } from "../utils/extract-roles.util.js";
 
 export interface CurrentUserData {

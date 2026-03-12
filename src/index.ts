@@ -16,12 +16,10 @@ export * from "./decorators/roles.decorator.js";
 export * from "./guards/cookie-auth.guard.js";
 export * from "./guards/header-auth.guard.js";
 export * from "./guards/role.guard.js";
-export * from "./jwt/jwks.js";
+
 // jwt
 export * from "./jwt/jwt.strategy.js";
-
-// type
-export * from "./types/gql-context.js";
+export * from "./jwt/jwks.js";
 
 // utils
 export * from "./utils/extract-roles.util.js";

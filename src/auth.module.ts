@@ -8,6 +8,6 @@ import { JwtStrategy } from "./jwt/jwt.strategy.js";
 @Module({
   imports: [JwtModule.register({})],
   providers: [JwtStrategy, HeaderAuthGuard, CookieAuthGuard, RoleGuard],
-  exports: [JwtModule, HeaderAuthGuard, CookieAuthGuard, RoleGuard],
+  exports: [JwtModule, HeaderAuthGuard, CookieAuthGuard, RoleGuard, JwtStrategy],
 })
 export class AuthModule {}
