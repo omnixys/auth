@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.10](https://github.com/omnixys/auth/compare/v1.1.9...v1.1.10) (2026-03-12)
+
+### Auth
+
+* **Auth:** resolve NestJS DI failure caused by type-only import of JwtService ([](https://github.com/omnixys/auth/commit/a720a50cb0d1f9c98068c27bfef6bbe10edf5fe7))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/auth ([](https://github.com/omnixys/auth/commit/37d6ae13c0a13fc2485cc68aea60ccee16fc1900))
+
 ## [1.1.9](https://github.com/omnixys/auth/compare/v1.1.8...v1.1.9) (2026-03-11)
 
 ### Fix
