@@ -37,6 +37,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   validate(payload: KeycloakRawOutput) {
       console.log('JWT validated:')
       console.log({payload});
+      console.log({realm_access: payload.realm_access});
+      console.log({roles: payload.realm_access.roles});
     return payload;
   }
 }
