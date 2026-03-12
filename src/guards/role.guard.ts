@@ -10,6 +10,7 @@ import { Reflector } from '@nestjs/core'
 
 import { ROLES_KEY } from '../decorators/roles.decorator.js'
 import { getRequest } from '@omnixys/context'
+import type { RealmRole } from '@omnixys/contracts'
 
 @Injectable()
 export class RoleGuard implements CanActivate {
@@ -18,7 +19,7 @@ export class RoleGuard implements CanActivate {
   canActivate(context: ExecutionContext): boolean {
 
     const requiredRoles =
-      this.reflector.getAllAndOverride<string[]>(ROLES_KEY, [
+      this.reflector.getAllAndOverride<RealmRole[]>(ROLES_KEY, [
         context.getHandler(),
         context.getClass(),
       ]) ?? []
@@ -29,13 +30,13 @@ export class RoleGuard implements CanActivate {
 
     const req = getRequest(context)
 
-    const event = req.user
+    const user = req.user
 
-    if (!event) {
+    if (!user) {
       throw new ForbiddenException('User not authenticated')
     }
 
-    const roles = event.roles ?? []
+    const roles = user.roles ?? []
 
     const allowed = requiredRoles.some(role =>
       roles.includes(role),

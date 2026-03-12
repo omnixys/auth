@@ -9,6 +9,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import jwksRsa from 'jwks-rsa';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import type { KeycloakRawOutput } from '@omnixys/contracts';
+import { extractUserRoles } from '../utils/extract-roles.util.js';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
@@ -34,11 +35,13 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-  validate(payload: KeycloakRawOutput) {
-      console.log('JWT validated:')
-      console.log({payload});
-      console.log({realm_access: payload.realm_access});
-      console.log({roles: payload.realm_access.roles});
-    return payload;
+validate(payload: KeycloakRawOutput) {
+  return {
+    id: payload.sub,
+    username: payload.preferred_username,
+    email: payload.email,
+    roles: extractUserRoles(payload),
+    raw: payload,
   }
+}
 }

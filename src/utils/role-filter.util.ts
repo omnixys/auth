@@ -1,3 +1,5 @@
+import { RealmRole } from "@omnixys/contracts"
+
 /**
  * Keycloak technical roles that should be ignored.
  */
@@ -6,6 +8,8 @@ const IGNORED_KEYCLOAK_ROLES = new Set([
   'uma_authorization',
   'default-roles-omnixys',
   'default-roles-master',
+  'realm-admin',
+  'Default user role',
 ])
 
 /**
@@ -14,13 +18,20 @@ const IGNORED_KEYCLOAK_ROLES = new Set([
  * @param roles All roles from Keycloak (realm_access.roles + resource_access roles)
  * @returns Clean business roles (e.g., ADMIN, USER, SECURITY)
  */
-export function filterRelevantRoles(roles: string[]): string[] {
+export function filterRelevantRoles(roles: string[]): RealmRole[] {
   if (!roles?.length) {
     return []
   }
 
-  const filtered = roles.filter(role => !IGNORED_KEYCLOAK_ROLES.has(role.toLowerCase()))
+  const filtered = roles
+  .map(role => role.trim())
+  .filter(role => !IGNORED_KEYCLOAK_ROLES.has(role.toLowerCase()))
+
+   // keep only roles that exist in the enum
+  const validRoles = filtered.filter(role =>
+    Object.values(RealmRole).includes(role as RealmRole)
+  )
 
   // remove duplicates
-  return [...new Set(filtered)]
+    return [...new Set(validRoles)] as RealmRole[]
 }
