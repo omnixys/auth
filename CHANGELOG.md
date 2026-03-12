@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.11](https://github.com/omnixys/auth/compare/v1.1.10...v1.1.11) (2026-03-12)
+
+### Log
+
+* **Log:** Update cookie-auth.guard.ts ([](https://github.com/omnixys/auth/commit/3673160c6e2f28e1b5583b79a0989da4ab293d66))
+
 ## [1.1.10](https://github.com/omnixys/auth/compare/v1.1.9...v1.1.10) (2026-03-12)
 
 ### Auth
