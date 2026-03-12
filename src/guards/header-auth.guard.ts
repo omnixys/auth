@@ -4,7 +4,8 @@ import {
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common'
-import type { JwtService } from '@nestjs/jwt'
+// biome-ignore lint/style/useImportType: class
+import { JwtService } from '@nestjs/jwt'
 
 import type { KeycloakRawOutput } from '@omnixys/contracts';
 import { extractUserRoles } from '../utils/extract-roles.util.js'
