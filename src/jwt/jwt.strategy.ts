@@ -4,19 +4,19 @@
 
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
-import { Injectable } from '@nestjs/common';
-import { PassportStrategy } from '@nestjs/passport';
-import jwksRsa from 'jwks-rsa';
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import type { KeycloakRawOutput } from '@omnixys/contracts';
-import { extractUserRoles } from '../utils/extract-roles.util.js';
+import { Injectable } from "@nestjs/common";
+import { PassportStrategy } from "@nestjs/passport";
+import type { KeycloakRawOutput } from "@omnixys/contracts";
+import jwksRsa from "jwks-rsa";
+import { ExtractJwt, Strategy } from "passport-jwt";
+import { extractUserRoles } from "../utils/extract-roles.util.js";
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor() {
     super({
       // Token must be signed with RS256
-      algorithms: ['RS256'],
+      algorithms: ["RS256"],
 
       // Extract token only from Authorization header (Guards handle cookies)
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
@@ -35,13 +35,13 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-validate(payload: KeycloakRawOutput) {
-  return {
-    id: payload.sub,
-    username: payload.preferred_username,
-    email: payload.email,
-    roles: extractUserRoles(payload),
-    raw: payload,
+  validate(payload: KeycloakRawOutput) {
+    return {
+      id: payload.sub,
+      username: payload.preferred_username,
+      email: payload.email,
+      roles: extractUserRoles(payload),
+      raw: payload,
+    };
   }
-}
 }

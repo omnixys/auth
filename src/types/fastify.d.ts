@@ -1,5 +1,5 @@
-import 'fastify';
-import type { KeycloakRawOutput } from '../dto/kc-rwa.dto.js';
+import "fastify";
+import type { KeycloakRawOutput } from "../dto/kc-rwa.dto.js";
 
 export interface AuthUser {
   id: string;
@@ -23,7 +23,7 @@ export interface AuthUser {
   refresh_token: string;
 }
 
-declare module 'fastify' {
+declare module "fastify" {
   interface FastifyRequest {
     user?: AuthUser;
 

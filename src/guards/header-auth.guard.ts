@@ -1,9 +1,20 @@
-import {
-  type ExecutionContext,
-  Injectable,
-} from '@nestjs/common'
+import { type ExecutionContext, Injectable } from "@nestjs/common";
 
-import { AuthGuard } from '@nestjs/passport';
+import { AuthGuard } from "@nestjs/passport";
+import { getRequest } from "@omnixys/context";
+import { extractBearerToken } from "../utils/token-extractor.util.js";
 
 @Injectable()
-export class HeaderAuthGuard extends AuthGuard('jwt') {}
+export class HeaderAuthGuard extends AuthGuard("jwt") {
+  getRequest(context: ExecutionContext) {
+    const req = getRequest(context);
+
+       const token = extractBearerToken(req)
+
+    if (token) {
+      req.headers.authorization = `Bearer ${token}`;
+    }
+
+    return req;
+  }
+}

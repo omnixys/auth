@@ -1,4 +1,4 @@
-import jwksRsa, { type JwksClient } from 'jwks-rsa'
+import jwksRsa, { type JwksClient } from "jwks-rsa";
 
 export function createJwksClient(jwksUri: string): JwksClient {
   return jwksRsa({
@@ -7,5 +7,5 @@ export function createJwksClient(jwksUri: string): JwksClient {
     cacheMaxEntries: 5,
     rateLimit: true,
     jwksRequestsPerMinute: 10,
-  })
+  });
 }

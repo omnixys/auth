@@ -1,16 +1,16 @@
-import { RealmRole } from "@omnixys/contracts"
+import { RealmRole } from "@omnixys/contracts";
 
 /**
  * Keycloak technical roles that should be ignored.
  */
 const IGNORED_KEYCLOAK_ROLES = new Set([
-  'offline_access',
-  'uma_authorization',
-  'default-roles-omnixys',
-  'default-roles-master',
-  'realm-admin',
-  'Default user role',
-])
+  "offline_access",
+  "uma_authorization",
+  "default-roles-omnixys",
+  "default-roles-master",
+  "realm-admin",
+  "Default user role",
+]);
 
 /**
  * Filters Keycloak technical roles and returns only business-relevant roles.
@@ -20,18 +20,18 @@ const IGNORED_KEYCLOAK_ROLES = new Set([
  */
 export function filterRelevantRoles(roles: string[]): RealmRole[] {
   if (!roles?.length) {
-    return []
+    return [];
   }
 
   const filtered = roles
-  .map(role => role.trim())
-  .filter(role => !IGNORED_KEYCLOAK_ROLES.has(role.toLowerCase()))
+    .map((role) => role.trim())
+    .filter((role) => !IGNORED_KEYCLOAK_ROLES.has(role.toLowerCase()));
 
-   // keep only roles that exist in the enum
-  const validRoles = filtered.filter(role =>
-    Object.values(RealmRole).includes(role as RealmRole)
-  )
+  // keep only roles that exist in the enum
+  const validRoles = filtered.filter((role) =>
+    Object.values(RealmRole).includes(role as RealmRole),
+  );
 
   // remove duplicates
-    return [...new Set(validRoles)] as RealmRole[]
+  return [...new Set(validRoles)] as RealmRole[];
 }
