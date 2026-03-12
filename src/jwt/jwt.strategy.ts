@@ -35,6 +35,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   validate(payload: KeycloakRawOutput) {
+      console.log('JWT validated:')
+      console.log({payload});
     return payload;
   }
 }
