@@ -9,10 +9,7 @@ import { RoleGuard } from './guards/role.guard.js'
 
 @Module({
   imports: [
-       JwtModule.register({
-      publicKey: undefined,
-      signOptions: { algorithm: 'RS256' },
-    }),
+     JwtModule.register({})
   ],
   providers: [
     JwtStrategy,
