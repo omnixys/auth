@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [2.0.1](https://github.com/omnixys/auth/compare/v2.0.0...v2.0.1) (2026-03-12)
+
+### Header
+
+* **Header:** add header option ([](https://github.com/omnixys/auth/commit/b2a100b953a80a4c3085af325c47b806b68b8fb2))
+
 ## [2.0.0](https://github.com/omnixys/auth/compare/v1.1.14...v2.0.0) (2026-03-12)
 
 ### Auth
