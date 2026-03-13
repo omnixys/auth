@@ -3,6 +3,20 @@
 All notable changes in this project will be documented in this file.
 
 
+## [2.0.5](https://github.com/omnixys/auth/compare/v2.0.4...v2.0.5) (2026-03-13)
+
+### Auth-user
+
+* **Auth-user:** fix authuser ([](https://github.com/omnixys/auth/commit/201be61e546cfd220559446087c7d5292d727596))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/auth ([](https://github.com/omnixys/auth/commit/c5ff5f0f44c332b68f7ec2742663e43d06d93bed))
+
+### Release
+
+* **Release:** update release ([](https://github.com/omnixys/auth/commit/5710a8741b1c63ccb1b062b129f35f82831162ca))
+
 ## [2.0.4](https://github.com/omnixys/auth/compare/v2.0.3...v2.0.4) (2026-03-13)
 
 ### Type mismatch
