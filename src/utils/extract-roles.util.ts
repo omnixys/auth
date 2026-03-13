@@ -1,4 +1,4 @@
-import type { KeycloakRawOutput, RealmRole } from "@omnixys/contracts";
+import type { KeycloakRawOutput, RealmRoleType } from "@omnixys/contracts";
 import { filterRelevantRoles } from "./role-filter.util.js";
 
 /**
@@ -7,7 +7,7 @@ import { filterRelevantRoles } from "./role-filter.util.js";
  * - resource_access.*.roles
  * And filters out system-level roles.
  */
-export function extractUserRoles(raw: KeycloakRawOutput): RealmRole[] {
+export function extractUserRoles(raw: KeycloakRawOutput): RealmRoleType[] {
   const realmRoles = raw.realm_access?.roles ?? [];
 
   const resourceRoles: string[] = [];

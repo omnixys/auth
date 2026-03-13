@@ -1,8 +1,8 @@
 import { SetMetadata } from "@nestjs/common";
-import type { RealmRole } from "@omnixys/contracts";
+import type { RealmRoleType } from "@omnixys/contracts";
 
 export const ROLES_KEY = Symbol("roles");
 
-export function Roles(...roles: RealmRole[]): MethodDecorator & ClassDecorator {
+export function Roles(...roles: RealmRoleType[]): MethodDecorator & ClassDecorator {
   return SetMetadata(ROLES_KEY, roles);
 }

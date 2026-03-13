@@ -7,7 +7,7 @@ import {
 // biome-ignore lint/style/useImportType: class
 import { Reflector } from "@nestjs/core";
 import { getRequest } from "@omnixys/context";
-import type { RealmRole } from "@omnixys/contracts";
+import type { RealmRoleType } from "@omnixys/contracts";
 import { ROLES_KEY } from "../decorators/roles.decorator.js";
 
 @Injectable()
@@ -16,7 +16,7 @@ export class RoleGuard implements CanActivate {
 
   canActivate(context: ExecutionContext): boolean {
     const requiredRoles =
-      this.reflector.getAllAndOverride<RealmRole[]>(ROLES_KEY, [
+      this.reflector.getAllAndOverride<RealmRoleType[]>(ROLES_KEY, [
         context.getHandler(),
         context.getClass(),
       ]) ?? [];
