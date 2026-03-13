@@ -52,6 +52,7 @@ jobs:
 
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
+      - run: pnpm build
 
       - name: Semantic Release
         run: pnpm run release
