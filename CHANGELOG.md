@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [2.0.6](https://github.com/omnixys/auth/compare/v2.0.5...v2.0.6) (2026-03-13)
+
+### Update
+
+* **Update:** fix CurrentUser ([](https://github.com/omnixys/auth/commit/419a3ca8e00155d1d03869e2c0a09ac4402d7b7c))
+
 ## [2.0.5](https://github.com/omnixys/auth/compare/v2.0.4...v2.0.5) (2026-03-13)
 
 ### Auth-user
