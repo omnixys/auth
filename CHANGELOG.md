@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [2.0.3](https://github.com/omnixys/auth/compare/v2.0.2...v2.0.3) (2026-03-13)
+
+### Update
+
+* **Update:** update package ([](https://github.com/omnixys/auth/commit/8173175cd3ccd92e4c935cb4dc7c2fd391b422ff))
+
 ## [2.0.2](https://github.com/omnixys/auth/compare/v2.0.1...v2.0.2) (2026-03-12)
 
 ### Update
