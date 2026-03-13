@@ -1,6 +1,5 @@
 import { createParamDecorator, type ExecutionContext } from "@nestjs/common";
-import { getRequest } from "@omnixys/context";
-import type { AuthUser } from "@omnixys/context";
+import { type AuthUser, getRequest } from "@omnixys/context";
 import { extractUserRoles } from "../utils/extract-roles.util.js";
 
 export interface CurrentUserData {
@@ -14,7 +13,7 @@ export interface CurrentUserData {
   access_token?: string;
   refresh_token?: string;
 
-  // raw: KeycloakRawOutput
+  raw: AuthUser;
 }
 
 export const CurrentUser = createParamDecorator(
@@ -25,7 +24,7 @@ export const CurrentUser = createParamDecorator(
       return null;
     }
 
-    const user: AuthUser = req.user;
+    const user= req.user;
 
     return {
       id: user.sub,
@@ -36,7 +35,7 @@ export const CurrentUser = createParamDecorator(
       roles: extractUserRoles(user.raw),
       access_token: user.access_token,
       refresh_token: user.refresh_token,
-      // raw: user,
+      raw: user,
     };
   },
 );

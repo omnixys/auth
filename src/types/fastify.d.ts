@@ -1,6 +1,6 @@
 import 'fastify';
 import '@fastify/cookie'
-import type { AuthUser } from './auth-user.type.js'
+import type { AuthUser } from "@omnixys/context";
 
 declare module 'fastify' {
   interface FastifyRequest {
