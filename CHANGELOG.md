@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [2.0.4](https://github.com/omnixys/auth/compare/v2.0.3...v2.0.4) (2026-03-13)
+
+### Type mismatch
+
+* **Type mismatch:** changed RealmRole to RealmRoleType ([](https://github.com/omnixys/auth/commit/b956bb86ae7567da45361c47ed24442cd9975d42))
+
 ## [2.0.3](https://github.com/omnixys/auth/compare/v2.0.2...v2.0.3) (2026-03-13)
 
 ### Update
