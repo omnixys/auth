@@ -1,8 +1,8 @@
-name: Publish Auth
+name: Publish Package
 
 on:
   workflow_run:
-    workflows: ['Release']
+    workflows: ['Release Package']
     types: [completed]
   # # push:
   #   branches: [main]
